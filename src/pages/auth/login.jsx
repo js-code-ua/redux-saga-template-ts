@@ -3,8 +3,6 @@ import LoginContainer from '../../containers/auth/login'
 
 export default function LoginPage() {
     return (
-        <div>
-            <LoginContainer />
-        </div>
+        <LoginContainer />
     )
 }

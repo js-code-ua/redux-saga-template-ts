@@ -2,6 +2,9 @@ import React, { FormEvent } from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import { FormComponentProps } from 'antd/es/form';
 
+import './styles.scss';
+import { Link } from 'react-router-dom';
+
 interface ILoginFormProps extends FormComponentProps {
     handleSubmit(values: any): void,
     handleError(error: any): void,
@@ -20,6 +23,7 @@ function LoginForm(props: ILoginFormProps) {
 
     return (
         <Form onSubmit={onSubmit} className="login-form">
+            <h3 className="main-label">LOG IN</h3>
             <Form.Item>
                 {props.form.getFieldDecorator('username', {
                     rules: [{ required: true, message: 'Please input your email!' }],
@@ -41,6 +45,19 @@ function LoginForm(props: ILoginFormProps) {
                         placeholder="Password"
                     />,
                 )}
+            </Form.Item>
+            <Form.Item>
+                {props.form.getFieldDecorator('remember', {
+                    valuePropName: 'checked',
+                    initialValue: true,
+                })(<Checkbox>Remember me</Checkbox>)}
+                <Link to="/forgot" className="login-form-forgot">
+                    Forgot password
+                </Link>
+                <Button type="primary" htmlType="submit" className="login-form-button">
+                    Log in
+                </Button>
+                Or <Link to="/signup">register now!</Link>
             </Form.Item>
         </Form>
     )

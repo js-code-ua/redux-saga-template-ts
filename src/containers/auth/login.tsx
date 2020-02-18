@@ -1,6 +1,8 @@
 import React from 'react';
 import LoginForm from '../../components/auth/loginForm';
 
+import './styles.scss';
+
 export default function LoginContainer() {
     return (
         <div className="login-form-container">
