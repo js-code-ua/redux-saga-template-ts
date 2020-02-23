@@ -26,7 +26,7 @@ function LoginForm(props: ILoginFormProps) {
             <h3 className="main-label">LOG IN</h3>
             <Form.Item>
                 {props.form.getFieldDecorator('username', {
-                    rules: [{ required: true, message: 'Please input your email!' }],
+                    rules: [{ required: true, message: 'Please add your email!' }],
                 })(
                     <Input
                         type="email"
@@ -37,7 +37,7 @@ function LoginForm(props: ILoginFormProps) {
             </Form.Item>
             <Form.Item>
                 {props.form.getFieldDecorator('password', {
-                    rules: [{ required: true, message: 'Please input your Password!' }],
+                    rules: [{ required: true, message: 'Please add your Password!' }],
                 })(
                     <Input
                         prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}

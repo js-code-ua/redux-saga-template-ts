@@ -3,6 +3,8 @@
   display: flex;
   flex-flow: column;
   padding: 2em;
+  animation-name: appear;
+  animation-duration: 2s;
 
   // shadow
   -webkit-box-shadow: 17px 13px 80px 2px rgba(166, 166, 171, 1);
